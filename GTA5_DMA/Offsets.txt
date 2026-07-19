@@ -1,0 +1,6 @@
+# GTA5 Enhanced — edit without rebuilding. Restart the app after changes.
+# Format: Name=0xHEX   (# comments ok)
+
+WorldPtr=0x434a958
+GlobalPtr=0x4737178
+BlipPtr=0x3debd70
