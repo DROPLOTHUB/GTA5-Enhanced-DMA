@@ -23,10 +23,10 @@ Runtime DLLs live in [`MemProcFS/`](MemProcFS/) and are **copied next to the exe
 
 ### 2. Build
 
-1. Open `GTA5_DMA.sln` in Visual Studio  
-2. Configuration: **Release** \| **x64**  
-3. Build → Build Solution (`Ctrl+Shift+B`)  
-4. Output: `x64\Release\GTA5_DMA.exe`
+**Easiest:** double-click `build.bat` in the repo root.  
+It finds Visual Studio, builds **Release | x64**, copies DLLs + `Offsets.txt` next to the exe, then opens `x64\Release\`.
+
+Or in Visual Studio: open `GTA5_DMA.sln` → **Release | x64** → Build Solution.
 
 After a successful build that folder should contain:
 
@@ -40,7 +40,7 @@ FTD3XX.dll
 
 ### 3. Offsets (no rebuild)
 
-Edit `GTA5_DMA/Offsets.txt` (or the copy next to the exe):
+Edit **`Offsets.txt` next to `GTA5_DMA.exe`** (copied there on every build from `GTA5_DMA/Offsets.txt`):
 
 ```ini
 # Hex — 0x optional. # starts a comment.
@@ -49,7 +49,7 @@ GlobalPtr=0x4737178
 BlipPtr=0x3debd70
 ```
 
-Restart the app after editing. Use the included **Dumper** (or your own) when the game updates.
+The app always reads the file beside the EXE. Restart after editing. Use the included **Dumper** when the game updates.
 
 ### 4. Run
 

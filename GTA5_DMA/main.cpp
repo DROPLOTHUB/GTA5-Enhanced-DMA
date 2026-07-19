@@ -11,7 +11,7 @@ int main(int, char**)
 {
 	MyImGui::Initialize();
 
-	if (!Offsets::Load("Offsets.txt"))
+	if (!Offsets::Load())
 	{
 		MyImGui::Close();
 		system("pause");

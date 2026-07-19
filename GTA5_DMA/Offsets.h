@@ -8,7 +8,7 @@ namespace Offsets
 	inline uintptr_t GlobalPtr = 0;
 	inline uintptr_t BlipPtr = 0;
 
-	// Loads WorldPtr / GlobalPtr / BlipPtr from Offsets.txt
+	// Loads WorldPtr / GlobalPtr / BlipPtr from Offsets.txt next to the EXE.
 	// Format (hex, 0x optional, # comments allowed):
 	//   WorldPtr=0x43dbc98
 	//   GlobalPtr=0x47c87a8
